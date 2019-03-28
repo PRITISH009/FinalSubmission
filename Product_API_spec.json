@@ -1,0 +1,520 @@
+{
+  "swagger" : "2.0",
+  "info": {
+        "title" : "ProductAPI",
+        "description" : "This is an API to manage Products of various brands, this API spec will help define various end points to manage products associated with varoius categories and brands",
+        "version" : "1.0.0"
+      },
+  "schemes" : ["https"],
+  "host" : "api.productinfo.io",
+  "basePath" : "/",
+  "paths" : {
+    "/books" : {
+      "get": {
+        "summary" : "Gets the List of Books",
+        "operationId" : "getbooks",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Books_schema'
+            }
+          }
+              
+        }
+      }
+    },
+    
+    "/books/{bookname}" : {
+      "get" : {
+        "summary" : "Gets a particular books",
+        "operationId" : "getBookname",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "bookname",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Books_schema'
+            }
+          }
+        }
+      }
+    },
+    
+    "/home_and_kitchen" : {
+      "get" : {
+        "summary" : "Gets the list of home and kitchen appliences",
+        "operationId" : "gethomekitchenappliences",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Appliences_and_products_schema'
+            }
+          }
+        }
+      }
+    },
+    
+    "/home_and_kitchen/{applience}" : {
+      "get" : {
+        "summary" : "Gets a particular books",
+        "operationId" : "getApplience",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "applience",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Appliences_and_products_schema'
+            }
+          }
+        }
+      }
+    },
+    
+    "/FoodItems" : {
+      "get" : {
+        "summary" : "Gets the list of packed food Items",
+        "operationId" : "getFoodItems",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Groceries_and_food_schema'
+            }
+          }
+        }
+      }
+    },
+    
+    "/FoodItems/{item}" : {
+      "get" : {
+        "summary" : "Gets a Food Item",
+        "operationId" : "getProcessedFood",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "item",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/Groceries_and_food_schema"
+            }
+          }
+        }
+      }
+    },
+    
+    "/Fashion" : {
+      "get" : {
+        "summary" : "Gets the list of Fashion products",
+        "operationId" : "getfashionproducts",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Fashion_schema'
+            }
+          }
+        }
+      }
+    },
+    
+    "/Fashion/{item}" : {
+      "get" : {
+        "summary" : "Gets the list of Fashion products",
+        "operationId" : "getwearables",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "item",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Fashion_schema'
+            }
+          }
+        }
+      }
+    },
+    "/Software-Ebooks" : {
+      "get" : {
+        "summary" : "Gets the list of available Ebooks",
+        "operationId" : "getEbooks",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Software~1Ebooks'
+            }
+          }
+        }
+      }
+    },
+    "/Software-Ebooks/{item}" : {
+      "get" : {
+        "summary" : "Gets the list of available Ebooks",
+        "operationId" : "getebookname",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "item",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Software~1Ebooks'
+            }
+          }
+        }
+      }
+    },
+    "/Beauty_and_personal_care" : {
+      "get" : {
+        "summary" : "Gets the list of Beauty products and personal care products",
+        "operationId" : "getcosmeticsproducts",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Beauty_and_personal_care'
+            }
+          }
+        }
+      }
+    },
+    "/Beauty_and_personal_care/{cosmeticItem}" : {
+      "get" : {
+        "summary" : "Gets the list of Beauty products and personal care products",
+        "operationId" : "getcosmeticsitem",
+        "parameters" : [{
+          "required" : true,
+          "in" : "path",
+          "name" : "cosmeticItem",
+          "type" : "string"
+        }],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/Beauty_and_personal_care'
+            }
+          }
+        }
+      }
+    },
+    "/AllProducts" : {
+      "get" : {
+        "summary" : "Gets all the products",
+        "operationId" : "SabLeAao",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : '#/definitions/GeneralProductsSchema'
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "definitions" : {
+    
+    
+    "GeneralProductsSchema" : {
+      "type" : "object",
+      "properties" : {
+        
+        "product_name" : {
+          "type" : "string",
+        },
+        
+        
+        "sku" : {
+          "type" : "string"
+        },
+        
+        
+        "brand/publication" : {
+          "type" : "string"
+        },
+        
+        
+        "category" : {
+          "type" : "string"
+        },
+        
+        
+        "state" : {
+          "type" : "string"
+        },
+        
+        
+        "display_details" : {
+          "type" : "object",
+          "properties" : {
+            
+            "selling_type" : {"type" : "string"},
+            
+            "display_images" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string",
+                "format" : "jpeg/png"
+              }
+            },
+            
+            "package_dimensions_details" : {
+              "type" : "object",
+              "properties" : {
+                "shipping_weight_in_pounds" : {"type" : "number"},
+                "package_length_in_inches": {"type" : "number"},
+                "package_width_in_inches" : {"type" : "number"},
+                "package_height_in_inches" : {"type" : "number"},
+              }
+            },
+            
+            
+            "price" : {
+              "type" : "object",
+              "properties" : {
+                "base_price" : {"type" : "number"},
+                "taxes" : {
+                  "type" : "object",
+                  "properties" : {
+                    "cgst" : {"type" : "number"},
+                    "sgst" : {"type" : "number"},
+                    "igst" : {"type" : "number"},
+                    "utggst" : {"type" : "number"}
+                  }
+                },
+                
+                "margin" : {"type" : "number", "format" : "percentage"}
+              }
+            },
+            
+           "warranty/guarantee" : {
+             "type" : "object",
+             "properties" : {
+               
+               "start_date" : {
+                 "type": "string",
+                 "format" : "date"
+               },
+               
+               "warranty/guarantee_period" : {
+                 "type" : "number",
+               }
+             }
+           },
+           
+           
+           "return_policy" : {
+             "type" : "object",
+             "properties" : {
+               
+               "applicable_or_not" : {
+                 "type" : "string",
+                 "enum" : ["true", "false"]
+               },
+               
+               "return_before" : {
+                 "type" : "string",
+                 "format" : "day"
+               }
+               
+             }
+           },
+           
+           "sender" : {
+             "type" : "object",
+             "properties" : {
+               "sender_skw" : {"type" : "number"},
+               "sender_address" : {"type" : "string"} 
+             }
+           },
+           
+           "offers" : {
+             "type" : "object",
+             "properties" : {
+               "valid" : {
+                  "type" : "string",
+                  "enum" : ["valid" , "invalid"],
+               },
+               "relation" : {
+                 "type" : "object",
+                 "properties" : {
+                   "status" : {"type" : "string", "enum" : ["Parent", "Child"]},
+                   "Parent_id" : {"type" : "string"},
+                   "Child_id" : {"type" : "string"}
+                 }
+               }
+             }
+           },
+           
+           "quantity" : {"type" : "number"},
+           
+           
+            "reviews" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "feedback" : {"type" : "string"},
+                  "ratings" : {"type" : "number",
+                    "minimum" : 1,
+                    "maximum" : 5,
+                    "exclusiveMinimum" : false,
+                    "exclusiveMaximum" : false
+                  },
+                }
+              }
+            }
+          },
+        }
+      }  
+    },
+    
+    "Appliences_and_products_schema" : {
+      "allOf" : [
+        
+      {
+        "$ref" : "#/definitions/GeneralProductsSchema"
+      },
+      
+      {
+        "type" : "object",
+        "properties" : {
+          "model_details_and_specs" : {"type" : "string"},
+          "color" : {"type" : "string"},
+          "mgf_date" : {
+            "type" : "string",
+            "format" : "date"
+            }
+          }
+        
+      }
+      
+      
+      ]
+    },
+      
+    "Groceries_and_food_schema" : {
+      
+      "allOf" : [
+        
+      {
+        "$ref" : '#/definitions/GeneralProductsSchema'
+      },
+      
+      { 
+          "type" : "object",
+          "properties" : {
+              "best_before" : {"type" : "string"},
+              "product_type" : {
+                "type" : "string",
+                "enum" : ["Veg", "Non-Veg"]
+              },
+              "ingredients" : {"type" : "array",
+                "items" : {"type" : "string"}
+              }
+          }
+        }
+      ]
+    },
+      
+    "Beauty_and_personal_care" : {
+      "allOf" : [
+        {
+          "$ref" : "#/definitions/GeneralProductsSchema"
+        },
+        
+        {
+          "type" : "object",
+          "properties" : {
+            "composition" : {
+              "type" : "array",
+              "items": {
+                  "type" : "string"
+                }
+              },
+              
+              "mgf_date" : {
+                "type" : "string",
+                "format" : "date"
+              },
+              
+              "best_before" : {
+                "type" : "string",
+                "format" : "date"
+              }
+            }
+        }
+      ]
+    },
+      
+    "Fashion_schema" : {
+      "allOf" : [
+        {
+          "$ref" : '#/definitions/GeneralProductsSchema'
+        },
+        {      
+          "type" : "object",
+            "properties" : {
+              "colors" : {"type" : "string"},
+              "size" : {"type" : "number"},
+              "washing_details" : {"type" : "string"}
+            }
+        }
+      ]
+    },
+      
+    "Books_schema" : {
+      "allOf" : [
+        {"$ref" : '#/definitions/GeneralProductsSchema'},
+        
+        {
+          "type" : "object", 
+          "properties" : {
+            "Author" : {"type" : "string"},
+            "blurb" : {"type" : "string"},
+            "binding" : {"type" : "string", "enum": ["HardBound", "PaperBack"]},
+          }
+        }
+      ]
+    },
+    "Software/Ebooks" : {
+      "allOf" : [
+        {"$ref" : '#/definitions/GeneralProductsSchema'},
+        {
+        "type": "object",
+        "properties" : {
+          "license" : {"type" : "string"},
+          "Author/Company" : {"type" : "string"},
+          "for_devices" : {"type": "array", "items" : {"type" : "string"}}
+        }
+      }
+      ]
+    }
+    
+  }
+}
